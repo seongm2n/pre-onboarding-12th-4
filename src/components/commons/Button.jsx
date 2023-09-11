@@ -1,11 +1,13 @@
+import { StyledButton } from '../../styles/Button';
+
 function Button({ value, district, children, onClick }) {
 	return (
-		<button
-			onClick={(e) => onClick(e.currentTarget.textContent)}
-			className={`${value === district ? 'btn-active' : 'btn'} `}
+		<StyledButton
+			active={value === district}
+			onClick={() => onClick(children)}
 		>
 			{children}
-		</button>
+		</StyledButton>
 	);
 }
 

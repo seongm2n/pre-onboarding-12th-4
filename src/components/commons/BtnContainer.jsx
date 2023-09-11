@@ -1,4 +1,6 @@
+import { BtnLayout } from '../../styles/Button';
+
 const BtnContainer = ({ children }) => {
-	return <div className='btn-wrapper'>{children}</div>;
+	return <BtnLayout>{children}</BtnLayout>;
 };
 export default BtnContainer;
