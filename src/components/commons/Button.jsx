@@ -1,8 +1,8 @@
-function Button({ left, right, children, onClick }) {
+function Button({ value, district, children, onClick }) {
 	return (
 		<button
 			onClick={(e) => onClick(e.currentTarget.textContent)}
-			className={`${left === right ? 'btn-active' : 'btn'} `}
+			className={`${value === district ? 'btn-active' : 'btn'} `}
 		>
 			{children}
 		</button>

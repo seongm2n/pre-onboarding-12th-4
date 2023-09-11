@@ -22,20 +22,20 @@ function ShowChartWithButtons() {
 		<div>
 			<ChartDisplay
 				district={district}
-				onClick={clickDistrict}
+				clickDistrict={clickDistrict}
 			/>
 			<BtnContainer>
 				<Button
-					left={district}
-					right='전체'
+					value={district}
+					district='전체'
 					onClick={clickDistrict}
 				>
 					전체
 				</Button>
 				{chartDistrict.map((value) => (
 					<Button
-						left={value}
-						right={district}
+						value={value}
+						district={district}
 						onClick={clickDistrict}
 						key={value}
 					>

@@ -10,6 +10,7 @@ function useChartData() {
 				time: new Date(time).toLocaleTimeString(),
 				...item,
 			}));
+			console.log(arrData);
 			setChartData(arrData);
 		};
 		getChart();
