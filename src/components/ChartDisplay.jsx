@@ -7,19 +7,17 @@ import {
 	CartesianGrid,
 	Tooltip,
 	Legend,
+	Cell,
 } from 'recharts';
+import useChartData from '../hooks/useChartData';
 
-function ChartDisplay({ data, selectedDistrict }) {
-	// 선택된 구 데이터 필터링
-	const filteredData = data.filter((item) =>
-		selectedDistrict.includes(item.id)
-	);
-
+function ChartDisplay({ district, clickDistrict }) {
+	const { data } = useChartData();
 	return (
 		<ComposedChart
 			width={1600}
 			height={700}
-			data={selectedDistrict.length > 0 ? filteredData : data}
+			data={data}
 			margin={{
 				top: 20,
 				right: 20,
@@ -37,18 +35,22 @@ function ChartDisplay({ data, selectedDistrict }) {
 				yAxisId='right'
 				orientation='right'
 			/>
-			<Tooltip
-				labelFormatter={(value) =>
-					data.find((item) => item.timestamp === value).id
-				}
-			/>
+			<Tooltip />
 			<Legend />
 			<Bar
 				dataKey='value_bar'
 				barSize={20}
 				fill='#413ea0'
 				yAxisId='left'
-			/>
+				onClick={(data) => clickDistrict(data.id)}
+			>
+				{data.map((entry, index) => (
+					<Cell
+						key={`cell-${index}`}
+						fill={`${entry.id === district ? `#444094` : `#8884d8`}`}
+					/>
+				))}
+			</Bar>
 			<Area
 				type='monotone'
 				dataKey='value_area'
