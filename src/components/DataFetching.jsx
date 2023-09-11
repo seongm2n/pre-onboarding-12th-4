@@ -20,7 +20,7 @@ function DataFetching({ onDataFetched }) {
 			}
 		}
 		getData();
-	}, [onDataFetched]);
+	}, []);
 
 	return null;
 }
