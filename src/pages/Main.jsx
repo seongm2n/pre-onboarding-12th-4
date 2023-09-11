@@ -1,6 +1,10 @@
-import React from 'react';
+import ShowChartWithButtons from '../components/ShowChartWithButtons';
 
 function Main() {
-	return <div>메인</div>;
+	return (
+		<div>
+			<ShowChartWithButtons />
+		</div>
+	);
 }
 export default Main;
