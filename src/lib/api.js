@@ -1,12 +1,7 @@
 import axios from 'axios';
 
-const DATA = './data/data.json';
+export const getChartData = async () => {
+	const res = await axios.get('/data/data.json');
 
-const instance = axios.create({
-	baseURL: DATA,
-	headers: {
-		'Content-Type': 'application/json',
-	},
-});
-
-export default instance;
+	return res.data.response;
+};
