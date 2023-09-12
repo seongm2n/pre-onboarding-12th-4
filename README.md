@@ -9,7 +9,7 @@
 
 ## 배포 링크
 
-[4주차 과제 링크](https://pre-onboarding-4-gamma.vercel.app/)
+[4주차 과제 링크](https://pre-onboarding-12th-4-ten.vercel.app/)
 
 </br>
 
