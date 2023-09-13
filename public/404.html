@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Page Not Found</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<style>
+			* {
+				line-height: 1.2;
+				margin: 0;
+			}
+
+			html {
+				background-color: #676464;
+				width: 100%;
+				height: 100vh;
+				text-align: center;
+			}
+
+			.error-layout {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 20px;
+			}
+
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 100px;
+			}
+
+			.error {
+				color: pink;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				height: 20vh;
+			}
+
+			h1 {
+				color: hotpink;
+        margin-bottom: 10px;
+			}
+
+			button {
+				font-size: 20px;
+				font-weight: 600;
+				color: hotpink;
+				background-color: white;
+				padding: 10px;
+				border: none;
+				border-radius: 30px;
+				cursor: pointer;
+			}
+
+			button:hover {
+				background-color: pink;
+			}
+
+			@media only screen and (max-width: 280px) {
+				body,
+				p {
+					width: 95%;
+				}
+
+				h1 {
+					font-size: 1.5em;
+					margin: 0 0 0.3em;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="error-layout">
+			<div class="error">
+				<h1>Sorry! An error occurred >.<</h1>
+				<h3>Could not find resource or page.</h3>
+			</div>
+			<button onclick="replaceLink()">Home</button>
+		</div>
+		<script type="text/javascript">
+			function replaceLink() {
+				location.replace('/');
+			}
+		</script>
+	</body>
+</html>

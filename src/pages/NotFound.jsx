@@ -16,7 +16,7 @@ function NotFound() {
 	}
 
 	const returnHome = () => {
-		navigate('/');
+		navigate('/', { replace: true });
 	};
 
 	return (
