@@ -69,6 +69,7 @@ function ChartDisplay({ district, clickDistrict }) {
 						fill='#9b634c'
 						yAxisId='left'
 						onClick={handleBarClick}
+						style={{ cursor: 'pointer' }}
 					>
 						{data.map((entry, index) => (
 							<Cell
